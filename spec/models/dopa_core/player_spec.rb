@@ -13,11 +13,12 @@ module DopaCore
 
     describe "Associations" do
 
-      it "has an action" do
+      it "has an Action" do
         player_action = create(:action_with_player)
 
         expect(Player.last.player_actions.size).to eq 1
       end
+
     end
 
   end

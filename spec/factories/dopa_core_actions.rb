@@ -8,4 +8,9 @@ FactoryGirl.define do
   factory :action_belonging_to_player, :class => DopaCore::Action do
     name "someone has me"
   end
+
+  factory :action_with_type, :class => DopaCore::Action do
+    association :action_type, factory: :action_type_with_actions, strategy: :build
+    name "i have a type"
+  end
 end

@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905172942) do
+ActiveRecord::Schema.define(version: 20140909153938) do
+
+  create_table "dopa_core_action_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "dopa_core_actions", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "action_type_id"
   end
 
   create_table "dopa_core_player_actions", force: true do |t|

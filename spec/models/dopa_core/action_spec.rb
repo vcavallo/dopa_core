@@ -11,5 +11,13 @@ module DopaCore
         end
       end
 
+      describe "Associations" do
+        it "belongs to an ActionType" do
+          action_with_type = create(:action_with_type)
+
+          expect(action_with_type.action_type).to be_a_kind_of(ActionType)
+        end
+      end
+
   end
 end
