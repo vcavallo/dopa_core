@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909153938) do
+ActiveRecord::Schema.define(version: 20140909173139) do
 
   create_table "dopa_core_action_types", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category"
+    t.integer  "challenge_id"
   end
 
   create_table "dopa_core_actions", force: true do |t|
@@ -24,6 +26,15 @@ ActiveRecord::Schema.define(version: 20140909153938) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "action_type_id"
+    t.integer  "progress_value"
+    t.integer  "point_value"
+  end
+
+  create_table "dopa_core_challenges", force: true do |t|
+    t.string   "name"
+    t.integer  "required_progress_points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "dopa_core_player_actions", force: true do |t|

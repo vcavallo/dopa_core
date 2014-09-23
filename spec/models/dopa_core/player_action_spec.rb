@@ -9,6 +9,7 @@ module DopaCore
 
         expect(player_action.player).to be_a_kind_of(Player)
       end
+
       it "belongs to an Action" do
         player_action = create(:action_with_player)
 

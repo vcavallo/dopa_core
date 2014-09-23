@@ -9,6 +9,18 @@ module DopaCore
         it "has a name" do
           expect(action.name).to eq "action name"
         end
+
+        it "has a point_value" do
+          expect(action.point_value).to eq 10
+        end
+
+        it "has a progress_value" do
+          expect(action.progress_value).to eq 1
+        end
+
+        it "has a trigger" do
+          pending "how will this work?"
+        end
       end
 
       describe "Associations" do
