@@ -9,6 +9,10 @@ module DopaCore
       it "has a name" do
         expect(player.name).to eq "player one"
       end
+
+      it "has an email" do
+        expect(player.email).to eq "player@one.com"
+      end
     end
 
     describe "Associations" do

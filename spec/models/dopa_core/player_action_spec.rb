@@ -17,5 +17,12 @@ module DopaCore
       end
 
     end
+    describe "Attributes" do
+      it "has an amount of points earned" do
+        player_action = create(:action_with_player)
+
+        expect(player_action.points_earned).to eq 100
+      end
+    end
   end
 end

@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :dopa_core_player_action, :class => DopaCore::PlayerAction do
     #player_id 1
     #action_id 1
+    points_earned 100
   end
 
   factory :action_with_player, :class => DopaCore::PlayerAction do
