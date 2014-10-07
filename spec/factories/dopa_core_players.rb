@@ -7,6 +7,7 @@ FactoryGirl.define do
   end
 
   factory :player_with_action, :class => DopaCore::Player do
+    email "action@bronson.com"
     name "action bronson"
   end
 end
