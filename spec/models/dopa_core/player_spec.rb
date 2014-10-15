@@ -25,5 +25,20 @@ module DopaCore
 
     end
 
+    describe "Methods" do
+
+      let(:player) { FactoryGirl.create(:dopa_core_player) }
+
+      it "can get an action assigned to it" do
+        expect(player.player_actions).to be_empty
+
+        an_action = FactoryGirl.create(:dopa_core_action)
+        player.add_action(an_action)
+
+        expect(player.player_actions).not_to be_empty
+        expect(player.player_actions.last.points_earned).to eq an_action.point_value
+      end
+
+    end
   end
 end
