@@ -7,6 +7,12 @@ FactoryGirl.define do
     progress_value 1
   end
 
+  factory :another_action, :class => DopaCore::Action do
+    name "another action name"
+    point_value 20
+    progress_value 1
+  end
+
   factory :action_belonging_to_player, :class => DopaCore::Action do
     name "someone has me"
     point_value 100

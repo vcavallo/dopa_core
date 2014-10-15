@@ -39,6 +39,17 @@ module DopaCore
         expect(player.player_actions.last.points_earned).to eq an_action.point_value
       end
 
+      it "can get multiple actions assigned to it at once" do
+        expect(player.player_actions).to be_empty
+
+        an_action = FactoryGirl.create(:dopa_core_action)
+        another_action = FactoryGirl.create(:another_action)
+        player.add_actions([an_action, another_action])
+
+        expect(player.player_actions.first.action_id).to eq an_action.id
+        expect(player.player_actions.second.action_id).to eq another_action.id
+      end
+
     end
   end
 end

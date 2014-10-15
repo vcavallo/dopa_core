@@ -12,5 +12,10 @@ module DopaCore
       self.player_actions.create(action: some_action)
     end
 
+    def add_actions(array_of_actions)
+      array_of_actions.each do |action|
+        self.add_action(action)
+      end
+    end
   end
 end

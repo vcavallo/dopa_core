@@ -18,9 +18,9 @@ module DopaCore
           expect(action.progress_value).to eq 1
         end
 
-        it "has a trigger" do
-          pending "how will this work?"
-        end
+        # it "has a trigger" do
+        #   pending "how will this work?"
+        # end
       end
 
       describe "Associations" do
