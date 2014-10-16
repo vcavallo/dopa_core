@@ -11,7 +11,13 @@ Gem::Specification.new do |s|
   s.email       = ["vinney@dopa.mn"]
   s.homepage    = "http://dopa.mn"
   s.summary     = "Internal engine for Dopamine's common player/action system"
-  s.description = ""
+  s.description = <<-EOF
+    dopa_core is an engine containing all the common game elements for Dopamine's gamified 
+    apps. In its current prerelease state it includes support for player identities, 
+    actions those players can take and leaderboard queries to fetch player's standings. 
+    This description must be updated as the engine is developed and eventually reaches 
+    the 'released' state.
+  EOF
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
