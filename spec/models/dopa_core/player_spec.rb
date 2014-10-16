@@ -23,9 +23,6 @@ module DopaCore
         expect(Player.last.player_actions.size).to eq 1
       end
 
-      # this no work.
-      # would need to properly simulate application model for this test to work
-      #
       let(:player) { build(:dopa_core_player) }
       let (:user) { build(:user) }
       it "belongs to a User" do
