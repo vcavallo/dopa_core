@@ -3,6 +3,7 @@ require "dopa_core/engine"
 module DopaCore
   mattr_accessor :player_class
   mattr_accessor :action_class
+  mattr_accessor :user_class
 
   def self.root
     File.expand_path(File.dirname(File.dirname(__FILE__)))
