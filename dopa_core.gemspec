@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
     the 'released' state.
   EOF
 
-  s.post_install_message = "Thanks for installing, fellow Dopamine employee!"
+  s.post_install_message = "Thanks for installing, fellow Dopamine employeee!"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006170351) do
+ActiveRecord::Schema.define(version: 20141016213506) do
 
   create_table "dopa_core_action_types", force: true do |t|
     t.string   "name"
@@ -50,6 +50,19 @@ ActiveRecord::Schema.define(version: 20141006170351) do
     t.datetime "updated_at"
     t.string   "name"
     t.string   "email"
+    t.integer  "user_id"
+  end
+
+  create_table "dopa_core_users", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
