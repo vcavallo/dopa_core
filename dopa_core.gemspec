@@ -19,7 +19,9 @@ Gem::Specification.new do |s|
     the 'released' state.
   EOF
 
-  s.post_install_message = "Thanks for installing, fellow Dopamine employeee!"
+  s.post_install_message = "Thanks for installing dopa_core, fellow Dopamine employeee! \n
+    You should run `$ rake dopa_core:install:migrations` to copy over the gem's migrations \n
+    and then `$ rake db:migrate` to run the migrations."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]

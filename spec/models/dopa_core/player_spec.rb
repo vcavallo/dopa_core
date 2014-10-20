@@ -26,7 +26,6 @@ module DopaCore
       let(:player) { build(:dopa_core_player) }
       let (:user) { build(:user) }
       it "belongs to a User" do
-        binding.pry
         player.should belong_to(:user)
       end
 
