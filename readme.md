@@ -34,6 +34,13 @@ of your app.
 
 ----------
 
+## ToDo:
+
+- add migrations or generators or whatever to set up the association between Player and app's User. Or do something better that accomplishes the same
+- generators for adding `< DopaCore::Player` to app's `Player?`
+
+----------
+
 rspec results as of 2014-09-23:
 
 ```rspec
