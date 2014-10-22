@@ -3,7 +3,7 @@ module DopaCore
     belongs_to :user, class_name: DopaCore.user_class
     has_many :player_actions
 
-    validates_presence_of :name
+    # validates_presence_of :name
     # validates :email, presence: true, uniqueness: true
 
     def testing_engine
