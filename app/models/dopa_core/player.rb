@@ -19,5 +19,9 @@ module DopaCore
         self.add_action(action)
       end
     end
+
+    def total_score
+      self.player_actions.sum(:points_earned)
+    end
   end
 end

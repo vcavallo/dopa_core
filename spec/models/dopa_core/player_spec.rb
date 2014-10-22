@@ -56,6 +56,18 @@ module DopaCore
         expect(player.player_actions.second.action_id).to eq another_action.id
       end
 
+      it "can report its current point total" do
+          first_action = FactoryGirl.create(:dopa_core_action)
+          second_action = FactoryGirl.create(:another_action)
+
+          player.add_actions([first_action, second_action])
+
+          expect(player.total_score).to eq(
+            first_action.point_value +
+            second_action.point_value
+          )
+      end
+
     end
   end
 end
