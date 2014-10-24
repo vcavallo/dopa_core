@@ -22,4 +22,10 @@ FactoryGirl.define do
     association :action_type, factory: :action_type_with_actions, strategy: :build
     name "i have a type"
   end
+
+  factory :custom_points_action, class: DopaCore::Action do
+    name "Custom Points Action"
+    has_custom_points true
+  end
+
 end

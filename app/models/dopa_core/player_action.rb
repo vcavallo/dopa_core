@@ -6,7 +6,9 @@ module DopaCore
     after_create :set_points_earned
 
     def set_points_earned
-      self.update(points_earned: self.action.point_value)
+      if !self.action.has_custom_points?
+        self.update(points_earned: self.action.point_value)
+      end
     end
   end
 end

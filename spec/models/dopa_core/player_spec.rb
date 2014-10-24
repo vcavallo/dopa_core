@@ -56,6 +56,20 @@ module DopaCore
         expect(player.player_actions.second.action_id).to eq another_action.id
       end
 
+      it "can get a custom-point-action assigned to it" do
+        expect(player.player_actions).to be_empty
+
+        template_action = FactoryGirl.create(:custom_points_action)
+        expect(Action.count).to eq 1
+
+        player.add_custom_points_action(template_action, 666)
+
+        expect(player.player_actions.last.points_earned).to eq 666
+
+        expect(Action.count).to eq 1
+        pending "GO OVER THIS AND ITS RIDICULOUS FRIENDS! (including player_action.set_points_earned. that should really be handling line 21 in DC:Player)"
+      end
+
       it "can report its current point total" do
           first_action = FactoryGirl.create(:dopa_core_action)
           second_action = FactoryGirl.create(:another_action)

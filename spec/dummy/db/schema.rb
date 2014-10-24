@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020220403) do
+ActiveRecord::Schema.define(version: 20141024212306) do
 
   create_table "dopa_core_action_types", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141020220403) do
     t.integer  "action_type_id"
     t.integer  "progress_value"
     t.integer  "point_value"
+    t.boolean  "has_custom_points"
   end
 
   create_table "dopa_core_challenges", force: true do |t|
@@ -50,6 +51,12 @@ ActiveRecord::Schema.define(version: 20141020220403) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "user_id"
+  end
+
+  create_table "dopa_core_users", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

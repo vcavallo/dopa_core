@@ -18,6 +18,11 @@ module DopaCore
           expect(action.progress_value).to eq 1
         end
 
+        it "can have custom/dynamic points" do
+          custom_points_action = build(:custom_points_action)
+          pending "need to write tests for this. refer to KPMG"
+        end
+
         # it "has a trigger" do
         #   pending "how will this work?"
         # end
