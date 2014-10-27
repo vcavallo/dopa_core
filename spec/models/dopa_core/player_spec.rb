@@ -50,7 +50,7 @@ module DopaCore
       end
 
       context "when assigning a player_action that has custom points" do
-        it "can get a custom-point-action assigned to it" do
+        it "uses the existing action as a template and assigns some number of points earned " do
           expect(player.player_actions).to be_empty
 
           template_action = FactoryGirl.create(:custom_points_action)
@@ -61,7 +61,7 @@ module DopaCore
           # pending "GO OVER THIS AND ITS RIDICULOUS FRIENDS! (including player_action.set_points_earned. that should really be handling line 21 in DC:Player)"
         end
 
-        it "uses the existing action as a template and doesn't create another nor destroy the original" do
+        it "doesn't create another nor destroy the original action" do
           expect(player.player_actions).to be_empty
 
           template_action = FactoryGirl.create(:custom_points_action)
