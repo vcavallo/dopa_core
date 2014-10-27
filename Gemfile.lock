@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dopa_core (0.2.3.pre)
+    dopa_core (0.2.5.pre)
       rails (>= 4.0.9)
 
 GEM

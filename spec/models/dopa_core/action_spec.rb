@@ -20,7 +20,8 @@ module DopaCore
 
         it "can have custom/dynamic points" do
           custom_points_action = build(:custom_points_action)
-          pending "need to write tests for this. refer to KPMG"
+          expect(custom_points_action.has_custom_points?).to eq true
+          expect(custom_points_action.point_value).to be_nil
         end
 
         # it "has a trigger" do

@@ -2,6 +2,12 @@ require 'spec_helper'
 
 module DopaCore
   describe ActionType do
+    describe "Refactors/changes" do
+      it "Custom point actions" do
+        pending "ActionType should be able to help set up custom point actions in a better way"
+      end
+    end
+
     describe "Attributes" do
       let(:action_type) { build(:dopa_core_action_type) }
 
