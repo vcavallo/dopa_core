@@ -16,11 +16,10 @@ module DopaCore
 
     def add_custom_points_action(some_custom_action, custom_points)
       #TODO: this is terribleh
-      temp_action = some_custom_action.dup
+      temp_action = some_custom_action.clone
       action_to_update = self.player_actions.new(action: temp_action)
       action_to_update.points_earned = custom_points
       self.save
-      temp_action.destroy
     end
 
     def add_actions(array_of_actions)
