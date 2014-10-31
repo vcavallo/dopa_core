@@ -8,4 +8,8 @@ FactoryGirl.define do
   factory :player_with_action, :class => DopaCore::Player do
     name "action bronson"
   end
+
+  factory :player_for_leaderboard, :class => DopaCore::Player do
+    name "Generic LeaderboardGuy"
+  end
 end
