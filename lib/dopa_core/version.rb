@@ -1,3 +1,3 @@
 module DopaCore
-  VERSION = "0.2.5.pre"
+  VERSION = "0.3.0.pre"
 end
